@@ -1,13 +1,14 @@
 from datetime import timedelta
 
 from homeassistant.components.binary_sensor import BinarySensorDeviceClass
-	
+from homeassistant.components.sensor import (
+    SensorDeviceClass,
+)
 from homeassistant.const import (
     ATTR_DEVICE_CLASS,
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    DEVICE_CLASS_SIGNAL_STRENGTH,
     DEVICE_CLASS_TEMPERATURE,
     LENGTH_METERS,
     TEMP_CELSIUS,
@@ -312,7 +313,7 @@ SENSORS = {
         ATTR_NAME: "WAN 3G signal strength",
         ATTR_UNIT_OF_MEASUREMENT: DECIBEL_MILLIWATTS,
         ATTR_ICON: "mdi:signal-3g",
-        ATTR_DEVICE_CLASS: DEVICE_CLASS_SIGNAL_STRENGTH,
+        ATTR_DEVICE_CLASS: SensorDeviceClass.SIGNAL_STRENGTH,
     },
     "wan_dhcp_remaining": {
         ATTR_NAME: "WAN DHCP remaining",
