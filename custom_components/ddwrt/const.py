@@ -9,7 +9,6 @@ from homeassistant.const import (
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    LENGTH_METERS,
     TEMP_CELSIUS,
     TIME_MICROSECONDS,
     TIME_MINUTES,
