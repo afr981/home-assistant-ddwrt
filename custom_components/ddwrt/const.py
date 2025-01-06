@@ -1,7 +1,7 @@
 from datetime import timedelta
 
 from homeassistant.components.binary_sensor import (
-    DEVICE_CLASS_CONNECTIVITY,
+    CONNECTIVITY,
 )
 from homeassistant.const import (
     ATTR_DEVICE_CLASS,
