@@ -9,14 +9,14 @@ from homeassistant.const import (
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    ELECTRIC_POTENTIAL_VOLT,
 )
 from homeassistant.const import ( 
     UnitOfInformation, 
     UnitOfDataRate,
     UnitOfLength,
     UnitOfTemperature,
-    UnitOfTime
+    UnitOfTime,
+    UnitOfElectricPotential,
 )
 
 _VERSION = "1.1.4"
@@ -306,7 +306,7 @@ SENSORS = {
     },
     "voltage": {
         ATTR_NAME: "Voltage",
-        ATTR_UNIT_OF_MEASUREMENT: ELECTRIC_POTENTIAL_VOLT,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfElectricPotential.VOLT,
         ATTR_ICON: "mdi:current-dc",
         ATTR_DEVICE_CLASS: None,
     },
