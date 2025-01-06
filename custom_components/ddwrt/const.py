@@ -15,7 +15,11 @@ from homeassistant.const import (
     TIME_MINUTES,
     ELECTRIC_POTENTIAL_VOLT,
 )
-from homeassistant.const import UnitOfInformation, UnitOfDataRate
+from homeassistant.const import ( 
+    UnitOfInformation, 
+    UnitOfDataRate,
+    UnitOfLength
+)
 
 _VERSION = "1.1.4"
 
@@ -424,7 +428,7 @@ SENSORS = {
     },
     "wl_ack_distance": {
         ATTR_NAME: "Wireless ACK distance",
-        ATTR_UNIT_OF_MEASUREMENT: LENGTH_METERS,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfLength.METERS,
         ATTR_ICON: "mdi:wifi",
         ATTR_DEVICE_CLASS: None,
     },
