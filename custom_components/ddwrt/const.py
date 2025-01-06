@@ -9,15 +9,14 @@ from homeassistant.const import (
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    TEMP_CELSIUS,
-    TIME_MICROSECONDS,
-    TIME_MINUTES,
     ELECTRIC_POTENTIAL_VOLT,
 )
 from homeassistant.const import ( 
     UnitOfInformation, 
     UnitOfDataRate,
-    UnitOfLength
+    UnitOfLength,
+    UnitOfTemperature,
+    UnitOfTime
 )
 
 _VERSION = "1.1.4"
@@ -157,7 +156,7 @@ SENSORS = {
     },
     "cpu_temp": {
         ATTR_NAME: "Temperature",
-        ATTR_UNIT_OF_MEASUREMENT: TEMP_CELSIUS,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfTemperature.CELSIUS,
         ATTR_ICON: "mdi:thermometer",
         ATTR_DEVICE_CLASS: SensorDeviceClass.TEMPERATURE,
     },
@@ -205,7 +204,7 @@ SENSORS = {
     },
     "lan_dhcp_lease_time": {
         ATTR_NAME: "LAN DHCP lease time",
-        ATTR_UNIT_OF_MEASUREMENT: TIME_MINUTES,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfTime.MINUTES,
         ATTR_ICON: "mdi:ip-network",
         ATTR_DEVICE_CLASS: None,
     },
@@ -421,7 +420,7 @@ SENSORS = {
     },
     "wl_ack_timing": {
         ATTR_NAME: "Wireless ACK timing",
-        ATTR_UNIT_OF_MEASUREMENT: TIME_MICROSECONDS,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfTime.MICROSECONDS,
         ATTR_ICON: "mdi:wifi",
         ATTR_DEVICE_CLASS: None,
     },
