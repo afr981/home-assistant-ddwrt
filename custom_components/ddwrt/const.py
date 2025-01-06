@@ -7,7 +7,6 @@ from homeassistant.const import (
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    DATA_RATE_MEGABITS_PER_SECOND,
     DEVICE_CLASS_SIGNAL_STRENGTH,
     DEVICE_CLASS_TEMPERATURE,
     LENGTH_METERS,
@@ -16,7 +15,7 @@ from homeassistant.const import (
     TIME_MINUTES,
     ELECTRIC_POTENTIAL_VOLT,
 )
-from homeassistant.const import UnitOfInformation
+from homeassistant.const import UnitOfInformation, UnitOfDataRate
 
 _VERSION = "1.1.4"
 
@@ -467,7 +466,7 @@ SENSORS = {
     },
     "wl_rate": {
         ATTR_NAME: "Wireless rate",
-        ATTR_UNIT_OF_MEASUREMENT: DATA_RATE_MEGABITS_PER_SECOND,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfDataRate.MEGABITS_PER_SECOND,
         ATTR_ICON: "mdi:wifi",
         ATTR_DEVICE_CLASS: None,
     },
