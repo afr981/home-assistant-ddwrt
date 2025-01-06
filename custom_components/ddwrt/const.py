@@ -9,7 +9,6 @@ from homeassistant.const import (
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    DEVICE_CLASS_TEMPERATURE,
     LENGTH_METERS,
     TEMP_CELSIUS,
     TIME_MICROSECONDS,
@@ -157,7 +156,7 @@ SENSORS = {
         ATTR_NAME: "Temperature",
         ATTR_UNIT_OF_MEASUREMENT: TEMP_CELSIUS,
         ATTR_ICON: "mdi:thermometer",
-        ATTR_DEVICE_CLASS: DEVICE_CLASS_TEMPERATURE,
+        ATTR_DEVICE_CLASS: SensorDeviceClass.TEMPERATURE,
     },
     "ddns_status": {
         ATTR_NAME: "DDNS status",
