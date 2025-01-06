@@ -7,8 +7,6 @@ from homeassistant.const import (
     ATTR_ICON,
     ATTR_NAME,
     ATTR_UNIT_OF_MEASUREMENT,
-    DATA_KILOBYTES,
-    DATA_MEGABYTES,
     DATA_RATE_MEGABITS_PER_SECOND,
     DEVICE_CLASS_SIGNAL_STRENGTH,
     DEVICE_CLASS_TEMPERATURE,
@@ -18,6 +16,7 @@ from homeassistant.const import (
     TIME_MINUTES,
     ELECTRIC_POTENTIAL_VOLT,
 )
+from homeassistant.const import UnitOfInformation
 
 _VERSION = "1.1.4"
 
@@ -270,13 +269,13 @@ SENSORS = {
     },
     "nvram_used": {
         ATTR_NAME: "NVRAM Used",
-        ATTR_UNIT_OF_MEASUREMENT: DATA_KILOBYTES,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfInformation.KILOBYTES,
         ATTR_ICON: "mdi:memory",
         ATTR_DEVICE_CLASS: None,
     },
     "nvram_total": {
         ATTR_NAME: "NVRAM Total",
-        ATTR_UNIT_OF_MEASUREMENT: DATA_KILOBYTES,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfInformation.KILOBYTES,
         ATTR_ICON: "mdi:memory",
         ATTR_DEVICE_CLASS: None,
     },
@@ -402,13 +401,13 @@ SENSORS = {
     },
     "wan_traffic_in": {
         ATTR_NAME: "WAN traffic inbound",
-        ATTR_UNIT_OF_MEASUREMENT: DATA_MEGABYTES,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfInformation.MEGABYTES,
         ATTR_ICON: "mdi:download",
         ATTR_DEVICE_CLASS: None,
     },
     "wan_traffic_out": {
         ATTR_NAME: "WAN traffic outbound",
-        ATTR_UNIT_OF_MEASUREMENT: DATA_MEGABYTES,
+        ATTR_UNIT_OF_MEASUREMENT: UnitOfInformation.MEGABYTES,
         ATTR_ICON: "mdi:upload",
         ATTR_DEVICE_CLASS: None,
     },
