@@ -1,6 +1,6 @@
 from datetime import timedelta
 
-from homeassistant.components.binary_sensor import BinarySensorDeviceClass.CONNECTIVITY
+from homeassistant.components.binary_sensor import BinarySensorDeviceClass
 	
 from homeassistant.const import (
     ATTR_DEVICE_CLASS,
@@ -94,14 +94,14 @@ BINARY_SENSORS = {
         ATTR_UNIT_OF_MEASUREMENT: None,
         ATTR_ICON: "mdi:wan",
         ATTR_ICON_OFF: "mdi:alert-circle-outline",
-        ATTR_DEVICE_CLASS: DEVICE_CLASS_CONNECTIVITY,
+        ATTR_DEVICE_CLASS: BinarySensorDeviceClass.CONNECTIVITY,
     },
     "wl_radio": {
         ATTR_NAME: "WiFi radio",
         ATTR_UNIT_OF_MEASUREMENT: None,
         ATTR_ICON: "mdi:wifi",
         ATTR_ICON_OFF: "mdi:wifi-off",
-        ATTR_DEVICE_CLASS: DEVICE_CLASS_CONNECTIVITY,
+        ATTR_DEVICE_CLASS: BinarySensorDeviceClass.CONNECTIVITY,
     },
 }
 
