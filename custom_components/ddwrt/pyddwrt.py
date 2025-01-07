@@ -352,7 +352,7 @@ class DDWrt:
         self._get_parameter("wl_quality", "wl_quality")
         wl_radio = self.data.pop("wl_radio").strip().split(" ")
         try:
-            self.results.update({"wl_radio": True if wl_radio[2]  == "Active" else False})
+            self.results.update({"wl_radio": True if wl_radio[0]  == "Active" else False})
         except:
             _LOGGER.error("Unknown wireless radio status, please report this to the author: %s", wl_radio)
             self.results.update({"wl_radio": None})
