@@ -632,9 +632,9 @@ class DDWrt:
 
             # UPNP forwards:  WAN start port-WAN end port>LAN IP address:LAN start port-LAN end port | Protocol | Enabled | Name
             if (len(elements) != 0) and ((len(elements) % 53) == 0):
-                for i in range(0, len(elements), 4):
+                for i in range(0, len(elements), 53):
                     if elements[i] != '':
-                        upnp_temp = re.split('[->:]+', elements[i])
+                        upnp_temp = re.split('[->:(&gt;)]+', elements[i])
                         self.upnp_forwards.update( {
                             elements[i + 3]: {
                                 "name": elements[i + 3],
