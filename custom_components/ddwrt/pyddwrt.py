@@ -631,7 +631,7 @@ class DDWrt:
             _LOGGER.debug("DDWrt.update_upnp_data: UPNP len=%s elements=%s", len(elements), elements)
 
             # UPNP forwards:  WAN start port-WAN end port>LAN IP address:LAN start port-LAN end port | Protocol | Enabled | Name
-            if (len(elements) != 0) and ((len(elements) % 4) == 0):
+            if (len(elements) != 0) and ((len(elements) % 53) == 0):
                 for i in range(0, len(elements), 4):
                     if elements[i] != '':
                         upnp_temp = re.split('[->:]+', elements[i])
